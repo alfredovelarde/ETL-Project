@@ -17,6 +17,7 @@ For every type of information, we required, a call back to the API was made. The
 Each row corresponds to a single bicycle usage. 
 -	As for the information on air quality in Mexico City, these databases where extracted from Mexico City's Environmental Agency as XMLs and where transformed to a csv format.
 The information extracted included all the observations registered per each station. 
+
 Transform
 -	We created a data frame with the all the dates from January 2019 to August 2019. In this data frame we appended the information extracted from NOOA API. 
 -	For the information from Air Quality, first we had to change all data points containing the values -99 to 0, since these are null values. After all values where changed, an average was performed in order to have a single data point per day.
@@ -32,6 +33,7 @@ o	Edad_Usuario
 o	n_CO
 o	n_UVA
 o	n_UVB
+
 Load
 -	To load the final data base, we chose SQL since this is a more structured layout. 
 -	We created a connection to the data base using sqlalchemy. 
